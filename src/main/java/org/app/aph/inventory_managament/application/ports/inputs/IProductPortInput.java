@@ -14,4 +14,6 @@ public interface IProductPortInput {
 
     void delete(String uuid);
 
+    void reduceStock(Product product, Long newStock);
+
 }

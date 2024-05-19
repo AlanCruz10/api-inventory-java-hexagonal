@@ -40,4 +40,10 @@ public class ProductAdapterImpl implements IProductPortInput {
         repository.delete(mapper.toEntity(findByUuid(uuid)));
     }
 
+    @Override
+    public void reduceStock(Product product, Long newStock) {
+        product.setStock(newStock);
+        repository.save(mapper.toEntity(product));
+    }
+
 }
